@@ -1,0 +1,47 @@
+#include "dominion.h"
+#include "dominion_helpers.h"
+#include <string.h>
+#include <stdio.h>
+#include <assert.h>
+#include "rngs.h"
+
+
+#define TESTFUNC "getCost"
+
+int main() {
+
+    // assert pass/fail function
+    void assertTrue(int testResult, int gameResult) {
+        if(testResult == gameResult) {
+            printf("Assert Passed\n\n");
+        }
+        else {
+            printf("Assert Failed\n\n");
+        }
+    }
+
+    int i;
+    int seed = 1000;
+    int numPlayer = 2;
+    int costTotal = 0;
+    int p, r, handCount;
+    int bonus;
+    int k[10] = {adventurer, council_room, feast, gardens, mine
+               , remodel, smithy, village, baron, great_hall};
+    struct gameState G;
+    int maxHandCount = 5;
+
+    // initialize game state and players' cards
+    initializeGame(numPlayers, k, seed, &G);
+
+    printf("----------------- Testing: %s ----------------\n", TESTFUNC);
+    printf("TEST 1: Draw +3 cards\n");
+
+    memcpy(&testG, &G, sizeof(struct gameState));
+
+
+
+
+
+
+}
